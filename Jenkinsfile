@@ -14,6 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker run -d --name day2 -p 3006:3000 rhogue/day2'
+                sh 'sleep 2'
             }
         }
         stage('Run Integration Tests') {
