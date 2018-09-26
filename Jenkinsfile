@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Run Unit Tests') {
             steps {
-                sh 'npm test'
+                sh 'sudo npm test'
             }
         }
     }
