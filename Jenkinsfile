@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 3006:3006 rhogue/day2'
+                sh 'docker run -d --name day2 -p 3006:3000 rhogue/day2'
             }
         }
     }
