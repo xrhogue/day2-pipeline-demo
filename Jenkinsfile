@@ -21,11 +21,11 @@ pipeline {
                 sh 'sudo npm test integrationTest/integrationTest.js'
             }
         }
-        post {
-            cleanup {
-                sh 'docker kill day2'
-                sh 'docker rm day2'
-            }
+    }
+    post {
+        cleanup {
+            sh 'docker kill day2'
+            sh 'docker rm day2'
         }
     }
 }
